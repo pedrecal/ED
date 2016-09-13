@@ -1,0 +1,155 @@
+BUBBLE SORT 
+
+Tamanho do array [1 a 10000 | 0 para sair]: 
+Inicializar em ordem crescente ou decrescente [c|d|s=sair]? 
+
+MELHOR CASO: Array em ordem crescente 
+ Antes da ordenacao:  A = [ 1 2 3 ]
+Depois da ordenacao:  A = [ 1 2 3 ]
+
+-----  ------------------------------  --------------  ----- OPERACOES ------ 
+Linha  Codigo                          T(n)            Esperadas   Realizadas 
+-----  ------------------------------  --------------  ----------  ---------- 
+  1    for (i=0; i<=n-1; i++) {        2n+3                     9           9 
+  2      for (j=n-1; j>=i+1; j--) {    n^2+3n                  18          18 
+  3        if (A[j-1] > A[j]) {        4n(n-1)/2               12          12 
+  4          temp = A[j-1];            0                        0           0 
+  5          A[j-1] = A[j];            0                        0           0 
+  6          A[j] = temp; }}}          0                        0           0 
+-----  ------------------------------  --------------  ----------  ---------- 
+                                TOTAL  3n^2+3n+3               39          39 
+
+Tamanho do array [1 a 10000 | 0 para sair]: 
+Inicializar em ordem crescente ou decrescente [c|d|s=sair]? 
+
+PIOR CASO: Array em ordem decrescente 
+ Antes da ordenacao:  A = [ 3 2 1 ]
+Depois da ordenacao:  A = [ 1 2 3 ]
+
+-----  ------------------------------  --------------  ----- OPERACOES ------ 
+Linha  Codigo                          T(n)            Esperadas   Realizadas 
+-----  ------------------------------  --------------  ----------  ---------- 
+  1    for (i=0; i<=n-1; i++) {        2n+3                     9           9 
+  2      for (j=n-1; j>=i+1; j--) {    n^2+3n                  18          18 
+  3        if (A[j-1] > A[j]) {        4n(n-1)/2               12          12 
+  4          temp = A[j-1];            3n(n-1)/2                9           9 
+  5          A[j-1] = A[j];            4n(n-1)/2               12          12 
+  6          A[j] = temp; }}}          2n(n-1)/2                6           6 
+-----  ------------------------------  --------------  ----------  ---------- 
+                                TOTAL  (15n^2-3n+6)/2          66          66 
+
+Tamanho do array [1 a 10000 | 0 para sair]: 
+Inicializar em ordem crescente ou decrescente [c|d|s=sair]? 
+
+MELHOR CASO: Array em ordem crescente 
+ Antes da ordenacao:  A = [ 1 2 3 ... 8 9 10 ]
+Depois da ordenacao:  A = [ 1 2 3 ... 8 9 10 ]
+
+-----  ------------------------------  --------------  ----- OPERACOES ------ 
+Linha  Codigo                          T(n)            Esperadas   Realizadas 
+-----  ------------------------------  --------------  ----------  ---------- 
+  1    for (i=0; i<=n-1; i++) {        2n+3                    23          23 
+  2      for (j=n-1; j>=i+1; j--) {    n^2+3n                 130         130 
+  3        if (A[j-1] > A[j]) {        4n(n-1)/2              180         180 
+  4          temp = A[j-1];            0                        0           0 
+  5          A[j-1] = A[j];            0                        0           0 
+  6          A[j] = temp; }}}          0                        0           0 
+-----  ------------------------------  --------------  ----------  ---------- 
+                                TOTAL  3n^2+3n+3              333         333 
+
+Tamanho do array [1 a 10000 | 0 para sair]: 
+Inicializar em ordem crescente ou decrescente [c|d|s=sair]? 
+
+PIOR CASO: Array em ordem decrescente 
+ Antes da ordenacao:  A = [ 10 9 8 ... 3 2 1 ]
+Depois da ordenacao:  A = [ 1 2 3 ... 8 9 10 ]
+
+-----  ------------------------------  --------------  ----- OPERACOES ------ 
+Linha  Codigo                          T(n)            Esperadas   Realizadas 
+-----  ------------------------------  --------------  ----------  ---------- 
+  1    for (i=0; i<=n-1; i++) {        2n+3                    23          23 
+  2      for (j=n-1; j>=i+1; j--) {    n^2+3n                 130         130 
+  3        if (A[j-1] > A[j]) {        4n(n-1)/2              180         180 
+  4          temp = A[j-1];            3n(n-1)/2              135         135 
+  5          A[j-1] = A[j];            4n(n-1)/2              180         180 
+  6          A[j] = temp; }}}          2n(n-1)/2               90          90 
+-----  ------------------------------  --------------  ----------  ---------- 
+                                TOTAL  (15n^2-3n+6)/2         738         738 
+
+Tamanho do array [1 a 10000 | 0 para sair]: 
+Inicializar em ordem crescente ou decrescente [c|d|s=sair]? 
+
+MELHOR CASO: Array em ordem crescente 
+ Antes da ordenacao:  A = [ 1 2 3 ... 98 99 100 ]
+Depois da ordenacao:  A = [ 1 2 3 ... 98 99 100 ]
+
+-----  ------------------------------  --------------  ----- OPERACOES ------ 
+Linha  Codigo                          T(n)            Esperadas   Realizadas 
+-----  ------------------------------  --------------  ----------  ---------- 
+  1    for (i=0; i<=n-1; i++) {        2n+3                   203         203 
+  2      for (j=n-1; j>=i+1; j--) {    n^2+3n               10300       10300 
+  3        if (A[j-1] > A[j]) {        4n(n-1)/2            19800       19800 
+  4          temp = A[j-1];            0                        0           0 
+  5          A[j-1] = A[j];            0                        0           0 
+  6          A[j] = temp; }}}          0                        0           0 
+-----  ------------------------------  --------------  ----------  ---------- 
+                                TOTAL  3n^2+3n+3            30303       30303 
+
+Tamanho do array [1 a 10000 | 0 para sair]: 
+Inicializar em ordem crescente ou decrescente [c|d|s=sair]? 
+
+PIOR CASO: Array em ordem decrescente 
+ Antes da ordenacao:  A = [ 100 99 98 ... 3 2 1 ]
+Depois da ordenacao:  A = [ 1 2 3 ... 98 99 100 ]
+
+-----  ------------------------------  --------------  ----- OPERACOES ------ 
+Linha  Codigo                          T(n)            Esperadas   Realizadas 
+-----  ------------------------------  --------------  ----------  ---------- 
+  1    for (i=0; i<=n-1; i++) {        2n+3                   203         203 
+  2      for (j=n-1; j>=i+1; j--) {    n^2+3n               10300       10300 
+  3        if (A[j-1] > A[j]) {        4n(n-1)/2            19800       19800 
+  4          temp = A[j-1];            3n(n-1)/2            14850       14850 
+  5          A[j-1] = A[j];            4n(n-1)/2            19800       19800 
+  6          A[j] = temp; }}}          2n(n-1)/2             9900        9900 
+-----  ------------------------------  --------------  ----------  ---------- 
+                                TOTAL  (15n^2-3n+6)/2       74853       74853 
+
+Tamanho do array [1 a 10000 | 0 para sair]: 
+Inicializar em ordem crescente ou decrescente [c|d|s=sair]? 
+
+MELHOR CASO: Array em ordem crescente 
+ Antes da ordenacao:  A = [ 1 2 3 ... 998 999 1000 ]
+Depois da ordenacao:  A = [ 1 2 3 ... 998 999 1000 ]
+
+-----  ------------------------------  --------------  ----- OPERACOES ------ 
+Linha  Codigo                          T(n)            Esperadas   Realizadas 
+-----  ------------------------------  --------------  ----------  ---------- 
+  1    for (i=0; i<=n-1; i++) {        2n+3                  2003        2003 
+  2      for (j=n-1; j>=i+1; j--) {    n^2+3n             1003000     1003000 
+  3        if (A[j-1] > A[j]) {        4n(n-1)/2          1998000     1998000 
+  4          temp = A[j-1];            0                        0           0 
+  5          A[j-1] = A[j];            0                        0           0 
+  6          A[j] = temp; }}}          0                        0           0 
+-----  ------------------------------  --------------  ----------  ---------- 
+                                TOTAL  3n^2+3n+3          3003003     3003003 
+
+Tamanho do array [1 a 10000 | 0 para sair]: 
+Inicializar em ordem crescente ou decrescente [c|d|s=sair]? 
+
+PIOR CASO: Array em ordem decrescente 
+ Antes da ordenacao:  A = [ 1000 999 998 ... 3 2 1 ]
+Depois da ordenacao:  A = [ 1 2 3 ... 998 999 1000 ]
+
+-----  ------------------------------  --------------  ----- OPERACOES ------ 
+Linha  Codigo                          T(n)            Esperadas   Realizadas 
+-----  ------------------------------  --------------  ----------  ---------- 
+  1    for (i=0; i<=n-1; i++) {        2n+3                  2003        2003 
+  2      for (j=n-1; j>=i+1; j--) {    n^2+3n             1003000     1003000 
+  3        if (A[j-1] > A[j]) {        4n(n-1)/2          1998000     1998000 
+  4          temp = A[j-1];            3n(n-1)/2          1498500     1498500 
+  5          A[j-1] = A[j];            4n(n-1)/2          1998000     1998000 
+  6          A[j] = temp; }}}          2n(n-1)/2           999000      999000 
+-----  ------------------------------  --------------  ----------  ---------- 
+                                TOTAL  (15n^2-3n+6)/2     7498503     7498503 
+
+Tamanho do array [1 a 10000 | 0 para sair]: 

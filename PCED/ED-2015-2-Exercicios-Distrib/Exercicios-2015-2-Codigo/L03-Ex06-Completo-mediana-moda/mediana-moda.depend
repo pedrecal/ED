@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1437789496 source:c:\users\paulo\desktop\exercicios-2015-2-fonte\exercicios-2015-2-codigo-completo\l03-ex06-completo-mediana-moda\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

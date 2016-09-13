@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1437831312 source:c:\users\paulo\desktop\exercicios-2015-2-fonte\exercicios-2015-2-codigo-completo\l03-ex09-completo-conjuntos-desordem\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+
